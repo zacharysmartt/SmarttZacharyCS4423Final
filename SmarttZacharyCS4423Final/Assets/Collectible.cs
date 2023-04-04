@@ -16,9 +16,14 @@ public class Collectible : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    /*private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Player") {
-            Destroy(this.gameObject);
+            if (CapacityLimit.capacity < CapacityLimit.capacityLimit) {
+                Destroy(this.gameObject);
+            }
+            else {
+
+            }
         }
-    }
+    }*/
 }

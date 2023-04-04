@@ -148,4 +148,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   capacity: 0
+  capacityLimit: 10
   capacityText: {fileID: 0}
+  fist: {fileID: 5544484612092681496, guid: 2b227c18b5a9da841ad835a968735970, type: 3}
