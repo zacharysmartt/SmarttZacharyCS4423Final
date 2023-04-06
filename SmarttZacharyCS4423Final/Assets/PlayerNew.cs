@@ -61,7 +61,7 @@ public class PlayerNew : MonoBehaviour
                     GameObject newTree;
                     Vector2 treePosition = new Vector2(Random.Range(-7f, 7f), Random.Range(-0.5f, 3f));
                     newTree = Instantiate(tree, treePosition, Quaternion.identity);
-                    CapacityLimit.treeLimit++;
+                    CapacityLimit.treeCount++;
                 }
             }
             else if (withinAddCap) {
