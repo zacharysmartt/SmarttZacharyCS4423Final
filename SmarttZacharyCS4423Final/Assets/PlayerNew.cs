@@ -8,21 +8,33 @@ public class PlayerNew : MonoBehaviour
 {
 
     Rigidbody2D rb2d;
+
+    [Header("Movement")]
     public float speed = 2f;
     bool isDashing;
+
+    [Header("Capacity")]
     public int capacity = 0;
     //public int capacityLimit = 10;
     public Text capacityText;
-    // Start is called before the first frame update
-    public int money = 0;
+    //public Text capacityLimitText;
+
+    [Header("Money")]
+    public int money;
     public Text moneyText;
-    public GameObject fist;
-    public Text warningText;
-    //public SellZone sellZone;
+
+    [Header("Area Detection")]
     public bool withinSellZone;
+    public bool withinAddTree;
+    public bool withinAddCap;
+
+    public GameObject fist;
+    public GameObject tree;
+    public Text warningText;
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        money = 100;
         updateCapacityText();
         updateMoneyText();
     }
@@ -41,6 +53,24 @@ public class PlayerNew : MonoBehaviour
                 Debug.Log("Cha-ching!");
                 updateCapacityText();
                 updateMoneyText();
+            }
+            else if (withinAddTree) {
+                if (money >= 50 && CapacityLimit.treeCount < CapacityLimit.treeLimit) {
+                    money -= 50;
+                    updateMoneyText();
+                    GameObject newTree;
+                    Vector2 treePosition = new Vector2(Random.Range(-7f, 7f), Random.Range(-0.5f, 3f));
+                    newTree = Instantiate(tree, treePosition, Quaternion.identity);
+                    CapacityLimit.treeLimit++;
+                }
+            }
+            else if (withinAddCap) {
+                if (money >= 100) {
+                    money -= 100;
+                    updateMoneyText();
+                    updateCapacityText();
+                    CapacityLimit.capacityLimit += 10;
+                }
             }
         }
     }
@@ -78,6 +108,14 @@ public class PlayerNew : MonoBehaviour
             withinSellZone = true;
             Debug.Log("Within sell zone");
         }
+        if(other.tag == "AddTree") {
+            withinAddTree = true;
+            Debug.Log("Within tree zone");
+        }
+        if(other.tag == "AddCapacity") {
+            withinAddCap = true;
+            Debug.Log("Within cap zone");
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other) {
@@ -85,10 +123,19 @@ public class PlayerNew : MonoBehaviour
             withinSellZone = false;
             Debug.Log("Out of sell zone");
         }
+        if(other.tag == "AddTree") {
+            withinAddTree = false;
+            Debug.Log("Out of tree zone");
+        }
+        if(other.tag == "AddCapacity") {
+            withinAddCap = false;
+            Debug.Log("Out of cap zone");
+        }
     }
 
     void updateCapacityText() {
-        capacityText.text = CapacityLimit.capacity.ToString();
+        capacityText.text = CapacityLimit.capacity.ToString() + " / " + CapacityLimit.capacityLimit.ToString();
+        //capacityLimitText.text = "/ " + CapacityLimit.capacityLimit.ToString();
     }
 
     void updateMoneyText() {

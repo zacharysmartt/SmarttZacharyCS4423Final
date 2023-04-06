@@ -7,6 +7,8 @@ TagManager:
   - Collectible
   - PlayerHand
   - Sell
+  - AddTree
+  - AddCapacity
   layers:
   - Default
   - TransparentFX

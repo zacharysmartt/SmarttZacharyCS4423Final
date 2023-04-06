@@ -32,7 +32,7 @@ public class Tree : MonoBehaviour
             while(true) {
                 yield return new WaitForSeconds(30f);
                 newFruit = Instantiate(FruitPrefab, FruitPosition, Quaternion.identity);
-                Destroy(newFruit,30f);
+                Destroy(newFruit,10f);
             }
         }
 
