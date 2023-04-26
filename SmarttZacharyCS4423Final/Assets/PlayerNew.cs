@@ -11,6 +11,7 @@ public class PlayerNew : MonoBehaviour
 
     [Header("Movement")]
     public float speed = 2f;
+    bool isMoving;
     bool isDashing;
 
     [Header("Capacity")]
@@ -28,11 +29,16 @@ public class PlayerNew : MonoBehaviour
     public bool withinAddTree;
     public bool withinAddCap;
 
+    [Header("Audio")]
+    public AudioClip moneyAudio;
+    public AudioClip walkAudio;
+
     public GameObject fist;
     public GameObject tree;
     public Text warningText;
     void Start()
     {
+        isMoving = false;
         rb2d = GetComponent<Rigidbody2D>();
         money = 100;
         updateCapacityText();
@@ -51,6 +57,7 @@ public class PlayerNew : MonoBehaviour
                 money += CapacityLimit.capacity * 10;
                 CapacityLimit.capacity = 0;
                 Debug.Log("Cha-ching!");
+                GetComponent<AudioSource>().PlayOneShot(moneyAudio);
                 updateCapacityText();
                 updateMoneyText();
             }
@@ -94,6 +101,7 @@ public class PlayerNew : MonoBehaviour
             speed = this.speed;
         }
         rb2d.MovePosition(transform.position + (new Vector3(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical")) * Time.fixedDeltaTime * speed));
+        //playWalkAudio();
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -147,5 +155,13 @@ public class PlayerNew : MonoBehaviour
         Vector2 FistPosition = new Vector2((transform.position.x + 0.5f),(transform.position.y));
         punch = Instantiate(fist, FistPosition, Quaternion.identity);
         Destroy(punch, 0.2f);
+    }
+
+    void playWalkAudio() {
+        StartCoroutine(WalkAudioRoutine());
+        IEnumerator WalkAudioRoutine() {
+            GetComponent<AudioSource>().PlayOneShot(walkAudio);
+            yield return new WaitForSeconds(1f);
+        }
     }
 }

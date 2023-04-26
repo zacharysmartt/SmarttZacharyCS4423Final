@@ -9,6 +9,7 @@ TagManager:
   - Sell
   - AddTree
   - AddCapacity
+  - Dirt
   layers:
   - Default
   - TransparentFX
