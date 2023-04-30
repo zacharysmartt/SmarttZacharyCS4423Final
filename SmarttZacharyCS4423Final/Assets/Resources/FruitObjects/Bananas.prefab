@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3682820638376241223
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7936046207018201658, guid: 346479778de0a444993d1977cb340a77, type: 3}
+      propertyPath: m_Size.x
+      value: 0.95252246
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936046207018201658, guid: 346479778de0a444993d1977cb340a77, type: 3}
+      propertyPath: m_Size.y
+      value: 0.98712087
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936046207018201658, guid: 346479778de0a444993d1977cb340a77, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0030122697
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936046207018201658, guid: 346479778de0a444993d1977cb340a77, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0064395666
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936046207018201658, guid: 346479778de0a444993d1977cb340a77, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.9375
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936046207018201658, guid: 346479778de0a444993d1977cb340a77, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.96875
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936046207018201796, guid: 346479778de0a444993d1977cb340a77, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936046207018201796, guid: 346479778de0a444993d1977cb340a77, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.83875
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936046207018201796, guid: 346479778de0a444993d1977cb340a77, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.71875
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936046207018201796, guid: 346479778de0a444993d1977cb340a77, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.936
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936046207018201796, guid: 346479778de0a444993d1977cb340a77, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.885
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936046207018201796, guid: 346479778de0a444993d1977cb340a77, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936046207018201796, guid: 346479778de0a444993d1977cb340a77, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936046207018201796, guid: 346479778de0a444993d1977cb340a77, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936046207018201796, guid: 346479778de0a444993d1977cb340a77, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936046207018201796, guid: 346479778de0a444993d1977cb340a77, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936046207018201796, guid: 346479778de0a444993d1977cb340a77, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936046207018201796, guid: 346479778de0a444993d1977cb340a77, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936046207018201796, guid: 346479778de0a444993d1977cb340a77, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936046207018201798, guid: 346479778de0a444993d1977cb340a77, type: 3}
+      propertyPath: m_Name
+      value: Bananas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936046207018201798, guid: 346479778de0a444993d1977cb340a77, type: 3}
+      propertyPath: m_TagString
+      value: BananasFruit
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936046207018201799, guid: 346479778de0a444993d1977cb340a77, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1308077440, guid: 50ddb11b6f9eb204abbc507a07ccd385, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 346479778de0a444993d1977cb340a77, type: 3}

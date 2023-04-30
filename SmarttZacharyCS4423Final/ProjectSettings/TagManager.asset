@@ -10,6 +10,17 @@ TagManager:
   - AddTree
   - AddCapacity
   - Dirt
+  - Apple
+  - AppleFruit
+  - OrangeFruit
+  - GrapesFruit
+  - BananasFruit
+  - CherriesFruit
+  - MangoFruit
+  - SpeedFruit
+  - MoneyFruit
+  - Tree
+  - Tree Spot
   layers:
   - Default
   - TransparentFX
