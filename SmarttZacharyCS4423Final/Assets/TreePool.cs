@@ -37,6 +37,7 @@ public class TreePool : MonoBehaviour
         for (int i = 0; i < pooledTrees.Count; i++) {
             if (!(pooledTrees[i].activeInHierarchy)) {
                 treeCount++;
+                Debug.Log("Current tree count:" + treeCount);
                 return pooledTrees[i];
             }
         }

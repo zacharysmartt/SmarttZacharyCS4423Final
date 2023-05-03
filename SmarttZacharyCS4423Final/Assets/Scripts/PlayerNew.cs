@@ -14,7 +14,9 @@ public class PlayerNew : MonoBehaviour
     public Sprite speedSprite;
 
     [Header("Movement")]
-    public float speed = 25f;
+    public float speed = 2f;
+    public float defaultSpeed = 2f;
+    public float powerSpeed = 5f;
     bool isDashing;
 
     [Header("Capacity")]
@@ -22,17 +24,21 @@ public class PlayerNew : MonoBehaviour
     public Text capacityText;
 
     [Header("Money")]
-    public int money;
+    //public int money;
     public Text moneyText;
 
     [Header("Area Detection")]
     public bool withinSellZone;
     public bool withinAddTree;
-    public int withinAddCap;
+    public bool withinAddCap;
+    public bool withinLevelExit;
 
     [Header("Audio")]
+    public AudioClip collectAudio;
     public AudioClip moneyAudio;
     public AudioClip walkAudio;
+    public AudioClip speedAudio;
+    public AudioClip deniedAudio;
 
     public GameObject fist;
     public GameObject tree;
@@ -46,13 +52,12 @@ public class PlayerNew : MonoBehaviour
         sr = gameObject.GetComponent<SpriteRenderer>();
         if (TreeSpots == null) {
             TreeSpots = FindObjectsOfType<TreeSpot>();
-            Debug.Log("Number of Tree Spots in current scene: " + TreeSpots.Length);
         }
     }
 
     void Start()
     {
-        money = 100;
+        speed = defaultSpeed;
         updateCapacityText();
         updateMoneyText();
     }
@@ -60,12 +65,12 @@ public class PlayerNew : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        /*if (Input.GetKeyDown(KeyCode.Space)) {
             Punch();
-        }
+        }*/
         if (Input.GetKeyDown(KeyCode.E)) {
             if (withinSellZone) {
-                if (money >= 0 && CapacityLimit.capacity > 0) {
+                if (CapacityLimit.money >= 0 && CapacityLimit.capacity > 0) {
                     AddMoney(CapacityLimit.capacity * 10);
                     CapacityLimit.capacity = 0;
                     GetComponent<AudioSource>().PlayOneShot(moneyAudio);
@@ -74,19 +79,23 @@ public class PlayerNew : MonoBehaviour
                 }    
             }
             else if (withinAddTree) {
-                if (money >= 50 && TreePool.instance.treeCount < TreePool.instance.treeLimit) {
-                    spawningTree = true;
-                    money -= 50;
-                    updateMoneyText();
                     AddTree();
-                }
             }
-            else if (withinAddCap > 0) {
-                if (money >= 100) {
-                    money -= 100;
+            else if (withinAddCap) {
+                if (CapacityLimit.money >= 100) {
+                    CapacityLimit.money -= 100;
                     updateMoneyText();
                     updateCapacityText();
                     CapacityLimit.capacityLimit += 10;
+                }
+                else {
+                    GetComponent<AudioSource>().PlayOneShot(deniedAudio);
+                }
+            }
+            else if (withinLevelExit) {
+                if (CapacityLimit.money >= CapacityLimit.moneyGoal) {
+                    //scene transition to success/final results screen
+                    SceneManager.LoadScene("Level Select");
                 }
             }
         }
@@ -122,12 +131,14 @@ public class PlayerNew : MonoBehaviour
                 updateMoneyText();
             }
             else if (other.tag.Contains("Speed")) {
+                GetComponent<AudioSource>().PlayOneShot(speedAudio);
                 AddSpeed();
             }
             else {
                 if(CapacityLimit.capacity < CapacityLimit.capacityLimit) {
-                    updateCapacityText();
+                    GetComponent<AudioSource>().PlayOneShot(collectAudio);
                 }
+                updateCapacityText();
             }
         }
         if(other.tag == "Sell") {
@@ -137,7 +148,10 @@ public class PlayerNew : MonoBehaviour
             withinAddTree = true;
         }
         if(other.tag == "AddCapacity") {
-            withinAddCap++;
+            withinAddCap = true;
+        }
+        if(other.tag == "Level Exit") {
+            withinLevelExit = true;
         }
     }
 
@@ -149,28 +163,33 @@ public class PlayerNew : MonoBehaviour
             withinAddTree = false;
         }
         if(other.tag == "AddCapacity") {
-            withinAddCap--;
+            withinAddCap = false;
+        }
+        if(other.tag == "Level Exit") {
+            withinLevelExit = false;
         }
     }
 
     void AddMoney(int amount) {
-        money += amount;
+        CapacityLimit.money += amount;
     }
 
     void AddSpeed() {
         StartCoroutine(SpeedBoost());
         IEnumerator SpeedBoost() {
-            speed *= 2;
+            speed = powerSpeed;
             sr.sprite = speedSprite;
-            yield return new WaitForSeconds(10f);
-            speed = speed / 2;
+            yield return new WaitForSeconds(5f);
+            speed = defaultSpeed;
             sr.sprite = normalSprite;
         }
     }
 
     void AddTree() {
         for (int i = 0; i < TreeSpots.Length; i++) {
-            if (!(TreeSpots[i].hasTree)) {
+            if (!(TreeSpots[i].hasTree) && CapacityLimit.money >= 50) {
+                CapacityLimit.money -= 50;
+                updateMoneyText();
                 TreeSpots[i].GetTree();
                 break;
             }
@@ -182,15 +201,15 @@ public class PlayerNew : MonoBehaviour
     }
 
     void updateMoneyText() {
-        moneyText.text = "$" + money.ToString();
+        moneyText.text = "$" + CapacityLimit.money.ToString();
     }
 
-    private void Punch() {
+    /*private void Punch() {
         GameObject punch;
         Vector2 FistPosition = new Vector2((transform.position.x + 0.5f),(transform.position.y));
         punch = Instantiate(fist, FistPosition, Quaternion.identity);
         Destroy(punch, 0.2f);
-    }
+    }*/
 
     void playWalkAudio() {
         StartCoroutine(WalkAudioRoutine());

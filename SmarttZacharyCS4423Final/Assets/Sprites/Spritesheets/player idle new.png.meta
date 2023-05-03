@@ -120,10 +120,10 @@ TextureImporter:
       name: player idle new_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 3
-        width: 22
-        height: 28
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41e961e84646ac0498e40b4b189a1312
-      internalID: 434777172
+      spriteID: e661d9b578f5d2a4393df3ced51a5d7c
+      internalID: -801014741
       vertices: []
       indices: 
       edges: []
@@ -141,10 +141,10 @@ TextureImporter:
       name: player idle new_1
       rect:
         serializedVersion: 2
-        x: 36
-        y: 3
-        width: 22
-        height: 28
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8edd2b0cb594d354b98ca5580ddf3703
-      internalID: 152677036
+      spriteID: 95e6ddc144da4464c8d108f022aef49a
+      internalID: 2014830319
       vertices: []
       indices: 
       edges: []
@@ -169,8 +169,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      player idle new_0: 434777172
-      player idle new_1: 152677036
+      player idle new_0: -801014741
+      player idle new_1: 2014830319
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

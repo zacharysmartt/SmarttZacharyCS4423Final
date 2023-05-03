@@ -21,9 +21,12 @@ public class Collectible : MonoBehaviour
             if (!(this.tag.Contains("Speed") || this.tag.Contains("Money"))) {
                 if (CapacityLimit.capacity < CapacityLimit.capacityLimit) {
                     CapacityLimit.capacity += 1;
+                    Destroy(this.gameObject);
                 }
             }
-            Destroy(this.gameObject);
+            else {
+                Destroy(this.gameObject);
+            }
         }
     }
 }

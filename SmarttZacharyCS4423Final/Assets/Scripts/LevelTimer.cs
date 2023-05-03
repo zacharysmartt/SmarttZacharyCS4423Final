@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LevelTimer : MonoBehaviour
 {
 
     int currentMin = 0;
-    int startMin = 9;
+    public int startMin = 9;
     float currentSec = 0f;
-    float startSec = 59f;
+    public float startSec = 59f;
     public Text minText;
     public Text secText;
 
@@ -30,6 +31,7 @@ public class LevelTimer : MonoBehaviour
         if(currentSec <= 0) {
             if(currentMin == 0) {
                 currentSec = 0f;
+                SceneManager.LoadScene("Level Select");
             }
             else {
                 currentSec = 59f;

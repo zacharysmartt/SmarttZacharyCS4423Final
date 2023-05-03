@@ -21,6 +21,7 @@ TagManager:
   - MoneyFruit
   - Tree
   - Tree Spot
+  - Level Exit
   layers:
   - Default
   - TransparentFX

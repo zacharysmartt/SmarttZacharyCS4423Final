@@ -21,20 +21,20 @@ public class SoundOptions : MonoBehaviour
         }
         else {
             masterSlider.value = PlayerPrefs.GetFloat("Master");
-            sfxSlider.value = PlayerPrefs.GetFloat("SFX");
+            sfxSlider.value = PlayerPrefs.GetFloat("Sound");
             musicSlider.value = PlayerPrefs.GetFloat("Music");
         }
     }
 
-    void SetMasterVolume() {
+    public void SetMasterVolume() {
         SetVolume("Master", masterSlider.value);
     }
 
-    void SetSFXSlider() {
-        SetVolume("SFX", sfxSlider.value);
+    public void SetSFXVolume() {
+        SetVolume("Sound", sfxSlider.value);
     }
 
-    void SetMusicVolume() {
+    public void SetMusicVolume() {
         SetVolume("Music", musicSlider.value);
     }
 

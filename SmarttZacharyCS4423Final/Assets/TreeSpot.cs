@@ -8,17 +8,11 @@ public class TreeSpot : MonoBehaviour
 
    public void GetTree() {
         GameObject tree = TreePool.instance.GetPooledTree();
-        Debug.Log("Tree retrieved from pool");
 
-        if (tree == null) {
-            Debug.Log("Can't spawn tree");
-        }
-        else {
-            Debug.Log("Spawn tree");
+        if (tree != null) {
             tree.transform.position = this.transform.position;
             tree.SetActive(true);
             hasTree = true;
-            Debug.Log("Tree spawned");
         }
    }
 }

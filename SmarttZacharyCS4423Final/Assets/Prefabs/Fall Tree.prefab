@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1227046942625143109
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5593983971951945022, guid: 75570c5e7bdf5a5409cb849b6e5600cf, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.265625
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668913087552346673, guid: 75570c5e7bdf5a5409cb849b6e5600cf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 163155192, guid: 2821096d33746ab4a88f652a913492d7, type: 3}
+    - target: {fileID: 5668913087552346674, guid: 75570c5e7bdf5a5409cb849b6e5600cf, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668913087552346674, guid: 75570c5e7bdf5a5409cb849b6e5600cf, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2765
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668913087552346674, guid: 75570c5e7bdf5a5409cb849b6e5600cf, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3047
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668913087552346674, guid: 75570c5e7bdf5a5409cb849b6e5600cf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668913087552346674, guid: 75570c5e7bdf5a5409cb849b6e5600cf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668913087552346674, guid: 75570c5e7bdf5a5409cb849b6e5600cf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668913087552346674, guid: 75570c5e7bdf5a5409cb849b6e5600cf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668913087552346674, guid: 75570c5e7bdf5a5409cb849b6e5600cf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668913087552346674, guid: 75570c5e7bdf5a5409cb849b6e5600cf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668913087552346674, guid: 75570c5e7bdf5a5409cb849b6e5600cf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668913087552346674, guid: 75570c5e7bdf5a5409cb849b6e5600cf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668913087552346674, guid: 75570c5e7bdf5a5409cb849b6e5600cf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668913087552346674, guid: 75570c5e7bdf5a5409cb849b6e5600cf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668913087552346831, guid: 75570c5e7bdf5a5409cb849b6e5600cf, type: 3}
+      propertyPath: m_Name
+      value: Fall Tree
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5668913087552346676, guid: 75570c5e7bdf5a5409cb849b6e5600cf, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 75570c5e7bdf5a5409cb849b6e5600cf, type: 3}
+--- !u!1 &6893707951726936970 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5668913087552346831, guid: 75570c5e7bdf5a5409cb849b6e5600cf, type: 3}
+  m_PrefabInstance: {fileID: 1227046942625143109}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5704607859914942880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6893707951726936970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae9057b3246f0fc4e937c69f8f1b78c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sr: {fileID: 0}
+  orange: {fileID: 163155192, guid: 2821096d33746ab4a88f652a913492d7, type: 3}
+  yellow: {fileID: 775625097, guid: 2821096d33746ab4a88f652a913492d7, type: 3}
+  red: {fileID: 70216726, guid: 2821096d33746ab4a88f652a913492d7, type: 3}
+  brown: {fileID: -1789682108, guid: 2821096d33746ab4a88f652a913492d7, type: 3}
+  FruitPrefab: {fileID: 7936046207018201798, guid: 346479778de0a444993d1977cb340a77, type: 3}
+  fruit: []

@@ -1870,6 +1870,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4274014387940504873, guid: c98268d309093c94bae1806d93bdd929, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274014387940504873, guid: c98268d309093c94bae1806d93bdd929, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274014387940504873, guid: c98268d309093c94bae1806d93bdd929, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2095216523}
+    - target: {fileID: 4274014387940504873, guid: c98268d309093c94bae1806d93bdd929, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274014387940504873, guid: c98268d309093c94bae1806d93bdd929, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetMusicVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274014387940504873, guid: c98268d309093c94bae1806d93bdd929, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundOptions, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274014387940504873, guid: c98268d309093c94bae1806d93bdd929, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5483929064047500375, guid: c98268d309093c94bae1806d93bdd929, type: 3}
       propertyPath: m_Name
       value: Music Volume Slider
@@ -2162,6 +2190,34 @@ PrefabInstance:
     - target: {fileID: 3428590936764139679, guid: c98268d309093c94bae1806d93bdd929, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274014387940504873, guid: c98268d309093c94bae1806d93bdd929, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274014387940504873, guid: c98268d309093c94bae1806d93bdd929, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274014387940504873, guid: c98268d309093c94bae1806d93bdd929, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2095216523}
+    - target: {fileID: 4274014387940504873, guid: c98268d309093c94bae1806d93bdd929, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274014387940504873, guid: c98268d309093c94bae1806d93bdd929, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSFXVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274014387940504873, guid: c98268d309093c94bae1806d93bdd929, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundOptions, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274014387940504873, guid: c98268d309093c94bae1806d93bdd929, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5483929064047500375, guid: c98268d309093c94bae1806d93bdd929, type: 3}
       propertyPath: m_Name
@@ -3027,6 +3083,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4274014387940504873, guid: c98268d309093c94bae1806d93bdd929, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274014387940504873, guid: c98268d309093c94bae1806d93bdd929, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274014387940504873, guid: c98268d309093c94bae1806d93bdd929, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2095216523}
+    - target: {fileID: 4274014387940504873, guid: c98268d309093c94bae1806d93bdd929, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274014387940504873, guid: c98268d309093c94bae1806d93bdd929, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetMasterVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274014387940504873, guid: c98268d309093c94bae1806d93bdd929, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundOptions, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274014387940504873, guid: c98268d309093c94bae1806d93bdd929, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5483929064047500375, guid: c98268d309093c94bae1806d93bdd929, type: 3}
       propertyPath: m_Name
       value: Master Volume Slider
@@ -3563,7 +3647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 248826b70adeaaf49bd2a67c7a95cd68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio: {fileID: 24100000, guid: e0059dd054a749b418e4448105dff592, type: 2}
+  audio: {fileID: 24100000, guid: 63cad3f144cc2734ea8e46add7bb789c, type: 2}
   masterSlider: {fileID: 1799664617}
   sfxSlider: {fileID: 1304643820}
   musicSlider: {fileID: 1236570671}

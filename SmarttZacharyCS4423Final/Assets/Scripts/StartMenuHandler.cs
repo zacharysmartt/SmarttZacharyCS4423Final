@@ -8,7 +8,7 @@ public class StartMenuHandler : MonoBehaviour
 {
     public AudioSource audio;
     public void StartGame() {
-        SceneManager.LoadScene("DemoScene");
+        SceneManager.LoadScene("Level Select");
     }
 
     public void playButtonSound() {
