@@ -20,11 +20,9 @@ public class PlayerNew : MonoBehaviour
     bool isDashing;
 
     [Header("Capacity")]
-    public int capacity = 0;
     public Text capacityText;
 
     [Header("Money")]
-    //public int money;
     public Text moneyText;
 
     [Header("Area Detection")]
@@ -40,12 +38,7 @@ public class PlayerNew : MonoBehaviour
     public AudioClip speedAudio;
     public AudioClip deniedAudio;
 
-    public GameObject fist;
-    public GameObject tree;
-    public Text warningText;
-
     private TreeSpot[] TreeSpots;
-    public bool spawningTree = false;
 
     void Awake() {
         rb2d = GetComponent<Rigidbody2D>();
@@ -65,9 +58,6 @@ public class PlayerNew : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
-        /*if (Input.GetKeyDown(KeyCode.Space)) {
-            Punch();
-        }*/
         if (Input.GetKeyDown(KeyCode.E)) {
             if (withinSellZone) {
                 if (CapacityLimit.money >= 0 && CapacityLimit.capacity > 0) {
@@ -137,9 +127,11 @@ public class PlayerNew : MonoBehaviour
             else {
                 if(CapacityLimit.capacity < CapacityLimit.capacityLimit) {
                     GetComponent<AudioSource>().PlayOneShot(collectAudio);
+                    updateCapacityText();
                 }
                 updateCapacityText();
             }
+            updateCapacityText();
         }
         if(other.tag == "Sell") {
             withinSellZone = true;
@@ -203,13 +195,6 @@ public class PlayerNew : MonoBehaviour
     void updateMoneyText() {
         moneyText.text = "$" + CapacityLimit.money.ToString();
     }
-
-    /*private void Punch() {
-        GameObject punch;
-        Vector2 FistPosition = new Vector2((transform.position.x + 0.5f),(transform.position.y));
-        punch = Instantiate(fist, FistPosition, Quaternion.identity);
-        Destroy(punch, 0.2f);
-    }*/
 
     void playWalkAudio() {
         StartCoroutine(WalkAudioRoutine());
